@@ -1,12 +1,61 @@
-venv/
+# Environment / Secrets
+.env
+.env.local
+.env.production
+.env.*
+!.env.example
+
+# Python
 __pycache__/
 *.pyc
-.env
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+env.bak/
+venv.bak/
 .pytest_cache/
-alembic/versions/*.pyc
-exports/
+.mypy_cache/
+.ruff_cache/
+pip-log.txt
+pip-delete-this-directory.txt
 
-lc-questions/
+# Frontend
 frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.cache/
+frontend/.vite/
+frontend/vite.config.*.timestamp-*
+frontend/*.tsbuildinfo
+frontend/*-debug.log*
 
-backend/venv/
+# Dataset / Generated Data
+backend/data/raw/
+backend/data/canonical/
+backend/lc-questions/
+backend/analysis_results.json
+backend/schema_results.json
+backend/output.json
+backend/import_log.txt
+backend/exports/
+
+# Database / Local Files
+backend/dsa.db
+backend/dsa.db-journal
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs / Temporary Files
+*.log
+logs/
+.claude-replay.*
+.tmp-*

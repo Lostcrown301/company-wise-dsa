@@ -300,6 +300,25 @@ pytest
 
 ---
 
+## 📌 Disclaimer
+
+This project is an independent educational project and is not affiliated with,
+endorsed by, or sponsored by LeetCode or any company referenced on this platform.
+
+The platform provides links, titles, difficulty information, company associations,
+and other metadata derived from publicly available third-party sources.
+
+No LeetCode problem statements, solutions, editorials, test cases, or proprietary
+content are reproduced or distributed by this project.
+
+Dataset sources and attribution are documented in the repository. Each third-party
+source remains subject to its respective license and terms of use.
+
+If you believe any content or attribution in this repository requires correction
+or removal, please open an issue or contact the maintainer.
+
+---
+
 ## Author
 
 **Ashutosh Shukla**  
