@@ -27,8 +27,8 @@ The question metadata and relationships were aggregated from the following commu
 - **Data Used:** Company-wise question associations and basic metadata.
 - **Attribution/Usage Notes:** Data used purely for metadata indexing. Remains subject to the author's terms.
 
-### 2. snehashishroy/leetcode-companywise-interview-questions
-- **Repository:** [snehashishroy/leetcode-companywise-interview-questions](https://github.com/snehashishroy/leetcode-companywise-interview-questions)
+### 2. snehasishroy/leetcode-companywise-interview-questions
+- **Repository:** [snehashishroy/leetcode-companywise-interview-questions](https://github.com/snehasishroy/leetcode-companywise-interview-questions)
 - **Author/Owner:** snehashishroy
 - **License:** No explicit license file identified in the source repository.
 - **Data Used:** Company-wise question associations.
