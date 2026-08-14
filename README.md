@@ -94,44 +94,40 @@ Personal progress is intentionally stored in the browser's `localStorage` rather
 - The final dataset contains titles, difficulty, links, company relationships, topic relationships, and relative frequency information.
 - No problem statements, editorials, test cases, or solution code are included in the application dataset.
 
----
 
-## Data Sources & Attribution
 
-The question metadata and relationships were constructed using the following community repositories:
+## Disclaimer
 
-1. [krishnadey30/LeetCode-Questions-CompanyWise](https://github.com/krishnadey30/leetcode-questions-companywise)
-   *No license file published in the repository; see the repository's README/usage terms.*
+This project is an independent educational project and is not affiliated
+with, endorsed by, or sponsored by LeetCode or any company referenced on
+this platform.
 
-2. [snehashishroy/leetcode-companywise-interview-questions](https://github.com/snehashishroy/leetcode-companywise-interview-questions)
-   *No license file published in the repository; see the repository's README/usage terms.*
+The platform provides links, titles, difficulty information, company
+associations, topics, and other metadata derived from publicly available
+third-party sources.
 
-3. [ADHIL48/Leetcode-Companys-wise-Question-and-Solution](https://github.com/ADHIL48/Leetcode-Companys-wise-Question-and-Solution)
-   *No license file published in the repository; see the repository's README/usage terms.*
+No LeetCode problem statements, solutions, editorials, test cases, or
+proprietary content are reproduced or distributed by this project.
 
-4. [liquidslr/leetcode-company-wise-problems](https://github.com/liquidslr/leetcode-company-wise-problems)
-   *No license file published in the repository; see the repository's README/usage terms.*
+Dataset sources and attribution are documented separately. Third-party
+data remains subject to the respective licenses and terms of its original
+sources.
 
-5. [hxu296/leetcode-company-wise-problems-2022](https://github.com/hxu296/leetcode-company-wise-problems-2022)
-   *MIT License*
-
-Attribution is provided to the original dataset authors/repositories.
-
----
-
-## Legal / Attribution Notice
-
-Company Wise DSA is an independent community project and is not affiliated with, endorsed by, or sponsored by LeetCode or any company listed on the platform.
-
-LeetCode names, problem titles, and related trademarks belong to their respective owners.
+If you believe any content or attribution in this repository requires
+correction or removal, please open an issue or contact the maintainer.
 
 ---
 
 ## License
 
-The original source code of Company Wise DSA is licensed under the MIT License.
+The original source code of this project is licensed under the MIT License.
 
-Dataset and third-party materials remain subject to their respective licenses and usage terms. See the Data Sources & Attribution section.
+The MIT License applies only to original code authored for this project.
+Third-party data, repositories, trademarks, and other external materials
+are NOT covered by this license and remain subject to their respective
+licenses and terms.
+
+See [DATA_SOURCES.md](DATA_SOURCES.md) for source attribution and licensing information.
 
 ---
 

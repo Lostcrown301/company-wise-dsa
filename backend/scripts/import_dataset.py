@@ -6,6 +6,7 @@ from app.db.database import SessionLocal
 from app.models import Question, Company, Topic, DataSource, DifficultyEnum
 from app.models.associations import company_questions, question_topics, question_sources
 import urllib.parse
+from sqlalchemy import bindparam
 
 def validate_url(url: str) -> bool:
     if not url: return False
@@ -99,19 +100,63 @@ def import_dataset(file_path: str, mode: str):
             question_id_map[q_data["id"]] = existing_questions[q_data["slug"]].id
 
         print("Importing relationships...")
+        
+        # Preload existing relationships for idempotency check
+        existing_cq = {}
+        for row in db.execute(company_questions.select()):
+            existing_cq[(row.company_id, row.question_id)] = row
+
+        existing_qt = set()
+        for row in db.execute(question_topics.select()):
+            existing_qt.add((row.question_id, row.topic_id))
+
+        existing_qs = set()
+        for row in db.execute(question_sources.select()):
+            existing_qs.add((row.question_id, row.source_id))
+
         cq_inserts = []
+        cq_updates = []
         for cq in data["company_questions"]:
             c_id = company_id_map[cq["company_id"]]
             q_id = question_id_map[cq["question_id"]]
-            cq_inserts.append({"company_id": c_id, "question_id": q_id, "frequency": cq.get("frequency", 0.0), "last_seen": cq.get("last_seen")})
+            
+            existing = existing_cq.get((c_id, q_id))
+            if existing is None:
+                cq_inserts.append({
+                    "company_id": c_id, 
+                    "question_id": q_id, 
+                    "frequency": cq.get("frequency", 0.0), 
+                    "last_seen": cq.get("last_seen")
+                })
+                # Add to existing_cq to prevent duplicates within the same import dataset
+                existing_cq[(c_id, q_id)] = True 
+            else:
+                if "frequency" in cq or "last_seen" in cq:
+                    cq_updates.append({
+                        "b_company_id": c_id,
+                        "b_question_id": q_id,
+                        "frequency": cq.get("frequency", getattr(existing, "frequency", 0.0)),
+                        "last_seen": cq.get("last_seen", getattr(existing, "last_seen", None))
+                    })
+
         if cq_inserts:
             db.execute(company_questions.insert(), cq_inserts)
+            
+        if cq_updates:
+            stmt = (
+                company_questions.update()
+                .where(company_questions.c.company_id == bindparam("b_company_id"))
+                .where(company_questions.c.question_id == bindparam("b_question_id"))
+            )
+            db.execute(stmt, cq_updates)
 
         qt_inserts = []
         for qt in data["question_topics"]:
             q_id = question_id_map[qt["question_id"]]
             t_id = topic_id_map[qt["topic_id"]]
-            qt_inserts.append({"question_id": q_id, "topic_id": t_id})
+            if (q_id, t_id) not in existing_qt:
+                qt_inserts.append({"question_id": q_id, "topic_id": t_id})
+                existing_qt.add((q_id, t_id))
         if qt_inserts:
             db.execute(question_topics.insert(), qt_inserts)
 
@@ -119,7 +164,9 @@ def import_dataset(file_path: str, mode: str):
         for qs in data.get("question_sources", []):
             q_id = question_id_map[qs["question_id"]]
             s_id = source_id_map[qs["source_id"]]
-            qs_inserts.append({"question_id": q_id, "source_id": s_id})
+            if (q_id, s_id) not in existing_qs:
+                qs_inserts.append({"question_id": q_id, "source_id": s_id})
+                existing_qs.add((q_id, s_id))
         if qs_inserts:
             db.execute(question_sources.insert(), qs_inserts)
 
