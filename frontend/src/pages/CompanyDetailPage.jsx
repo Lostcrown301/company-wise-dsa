@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { getCompanyDetails, getQuestions } from "../api.js";
+import { getCompanyDetails, getQuestions, getTopics } from "../api.js";
 import QuestionTable from "../components/QuestionTable.jsx";
 import Pagination from "../components/Pagination.jsx";
 import { diffClass } from "../components/utils.js";
+
+// Cache topics outside the component to avoid unnecessary refetches
+let cachedTopics = null;
 
 export default function CompanyDetailPage() {
   const navigate = useNavigate();
@@ -11,12 +14,23 @@ export default function CompanyDetailPage() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const filter = searchParams.get("difficulty") || "All";
+  const topicFilter = searchParams.get("topic") || "All";
   const page = parseInt(searchParams.get("page")) || 1;
 
   const [company, setCompany] = useState(null);
   const [questions, setQuestions] = useState([]);
+  const [topics, setTopics] = useState(cachedTopics || []);
   const [pagination, setPagination] = useState({ total: 0, totalPages: 0 });
   const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    if (!cachedTopics) {
+      getTopics().then(data => {
+        cachedTopics = data;
+        setTopics(data);
+      }).catch(console.error);
+    }
+  }, []);
 
   useEffect(() => {
     if (!slug) {
@@ -33,7 +47,8 @@ export default function CompanyDetailPage() {
             company: slug, 
             limit: 50, 
             page, 
-            difficulty: filter === "All" ? undefined : filter.toLowerCase() 
+            difficulty: filter === "All" ? undefined : filter.toLowerCase(),
+            topic: topicFilter === "All" ? undefined : topicFilter
           })
         ]);
         setCompany(compData);
@@ -46,12 +61,22 @@ export default function CompanyDetailPage() {
       }
     };
     fetchData();
-  }, [slug, filter, page, navigate]);
+  }, [slug, filter, topicFilter, page, navigate]);
 
   const handleFilterChange = (newFilter) => {
     setSearchParams((prev) => {
       if (newFilter === "All") prev.delete("difficulty");
       else prev.set("difficulty", newFilter);
+      prev.set("page", "1"); // Reset to page 1 on filter change
+      return prev;
+    });
+  };
+
+  const handleTopicChange = (e) => {
+    const newTopic = e.target.value;
+    setSearchParams((prev) => {
+      if (newTopic === "All") prev.delete("topic");
+      else prev.set("topic", newTopic);
       prev.set("page", "1"); // Reset to page 1 on filter change
       return prev;
     });
@@ -89,7 +114,8 @@ export default function CompanyDetailPage() {
           {pagination.total.toLocaleString()} questions
         </p>
 
-        <div style={{ display: "flex", gap: 28, flexWrap: "wrap", marginBottom: 28 }}>
+        <div style={{ display: "flex", gap: 28, flexWrap: "wrap", marginBottom: 28, alignItems: "center" }}>
+          <div style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--muted-foreground)", textTransform: "uppercase", letterSpacing: "0.05em", marginRight: -12 }}>Company Totals:</div>
           {[{ label: "Easy", count: company.difficulty?.easy || 0 }, { label: "Medium", count: company.difficulty?.medium || 0 }, { label: "Hard", count: company.difficulty?.hard || 0 }].map(({ label, count }) => (
             <div key={label} style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
               <span className={diffClass(label)} style={{ fontFamily: "var(--font-dm-mono)", fontSize: 12 }}>{label}</span>
@@ -98,16 +124,52 @@ export default function CompanyDetailPage() {
           ))}
         </div>
 
-        <div style={{ display: "flex", gap: 0, borderBottom: "1px solid var(--border)" }}>
-          {["All", "Easy", "Medium", "Hard"].map((f) => (
-            <button
-              key={f}
-              onClick={() => handleFilterChange(f)}
-              style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: filter === f ? 500 : 400, color: filter === f ? "var(--accent)" : "var(--muted-foreground)", background: "none", border: "none", borderBottom: filter === f ? "2px solid var(--accent)" : "2px solid transparent", cursor: "pointer", padding: "8px 16px", marginBottom: -1, transition: "color 120ms ease" }}
-            >
-              {f}
-            </button>
-          ))}
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 24, alignItems: "center", borderBottom: "1px solid var(--border)" }}>
+          <div style={{ display: "flex", gap: 0 }}>
+            {["All", "Easy", "Medium", "Hard"].map((f) => (
+              <button
+                key={f}
+                onClick={() => handleFilterChange(f)}
+                style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: filter === f ? 500 : 400, color: filter === f ? "var(--accent)" : "var(--muted-foreground)", background: "none", border: "none", borderBottom: filter === f ? "2px solid var(--accent)" : "2px solid transparent", cursor: "pointer", padding: "8px 16px", marginBottom: -1, transition: "color 120ms ease" }}
+              >
+                {f}
+              </button>
+            ))}
+          </div>
+
+          <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "8px 0", marginBottom: -1, marginLeft: "auto" }}>
+            <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--muted-foreground)" }}>Topic:</span>
+            <div style={{ position: "relative", display: "inline-flex", alignItems: "center" }}>
+              <select
+                value={topicFilter}
+                onChange={handleTopicChange}
+                style={{
+                  fontFamily: "var(--font-dm-sans)",
+                  fontSize: 13,
+                  color: topicFilter === "All" ? "var(--foreground)" : "var(--accent)",
+                  background: "transparent",
+                  border: "none",
+                  cursor: "pointer",
+                  outline: "none",
+                  padding: "0 16px 0 0",
+                  appearance: "none",
+                  WebkitAppearance: "none",
+                  MozAppearance: "none",
+                  textDecoration: "underline",
+                  textDecorationColor: topicFilter === "All" ? "var(--border)" : "var(--accent)",
+                  textUnderlineOffset: 4
+                }}
+              >
+                <option value="All" style={{ color: "var(--foreground)", background: "var(--background)" }}>All Topics</option>
+                {topics.map(t => (
+                  <option key={t.slug} value={t.slug} style={{ color: "var(--foreground)", background: "var(--background)" }}>
+                    {t.name}
+                  </option>
+                ))}
+              </select>
+              <span style={{ pointerEvents: "none", position: "absolute", right: 0, fontSize: 10, color: topicFilter === "All" ? "var(--muted-foreground)" : "var(--accent)" }}>▼</span>
+            </div>
+          </div>
         </div>
       </section>
 
