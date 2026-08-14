@@ -41,6 +41,9 @@ backend/schema_results.json
 backend/output.json
 backend/import_log.txt
 backend/exports/
+backend/validate_csv.py
+backend/compile_dataset.py
+backend/leetcode_complete_dataset.csv
 
 # Session-generated ETL scripts and analysis artifacts (internal only)
 backend/analyze_untagged.py
