@@ -1,0 +1,10 @@
+{
+  "description": "Creates detailed UI designs from user input, enabling designers to visualize app layouts quickly without coding, streamlining the design process.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

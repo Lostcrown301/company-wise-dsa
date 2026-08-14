@@ -1,0 +1,41 @@
+# Canonical Dataset V1 Report
+
+## Discovery and Deduplication
+- Total unique questions: 3430
+- Total companies: 737
+- Total topics: 24
+- Company-question relationships: 23748
+- Question-topic relationships: 5049
+- Question-source relationships: 3430
+
+## Distributions
+- Easy: 838
+- Medium: 1825
+- Hard: 767
+- Unknown: 0
+- Questions without topics: 1557
+- Multiple-company questions: 2532
+- Multiple-topic questions: 1636
+
+## Conflicts and Anomalies
+- Duplicate questions removed: URL deduplication successfully collapsed 88373 redundant raw rows into canonical questions.
+- Duplicate company-question relationships removed: 68055 raw observations collapsed into canonical pairs.
+- Difficulty conflicts: 120 (Resolved via source precedence)
+- Topic conflicts: 0 (Topics normalized and merged)
+
+## Frequency Coverage
+- Relationships with relative frequency data: 23647
+- Relationships with missing frequency (defaulted to 0): 101
+  (Note: Frequency is a merged relative signal derived from available public datasets and is not an official LeetCode statistic.)
+
+## Source breakdown
+- Number of raw files processed: 3943
+- Number of raw rows processed: 91803
+- Number of excluded rows and reasons: 0 (Missing URL or non-LeetCode URL)
+- License breakdown: Data derived entirely from "LeetCode Company-wise Problem Lists" repository (Public / Attribution Required).
+
+## Validation Result
+- Verified all relational IDs.
+- Verified no time-period fields leaked.
+- Verified no solution/editorial/problem-statement fields leaked.
+- Validated against schema.

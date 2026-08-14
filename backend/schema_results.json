@@ -1,0 +1,219 @@
+﻿[
+    {
+        "Header":  "problem_link,problem_name,company_name,num_occur",
+        "File":  "E:\\TBD\\company wise dsa\\lc-questions\\1.Company_Wise_Problem\\Leetcode_Problems_\u0026_Solution\\leetcode_problems_and_companies.csv",
+        "RowCount":  3864,
+        "ExampleRow":  {
+                           "value":  "https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/,Minimum Consecutive Cards to Pick Up,Google,1",
+                           "PSPath":  "E:\\TBD\\company wise dsa\\lc-questions\\1.Company_Wise_Problem\\Leetcode_Problems_\u0026_Solution\\leetcode_problems_and_companies.csv",
+                           "PSParentPath":  "E:\\TBD\\company wise dsa\\lc-questions\\1.Company_Wise_Problem\\Leetcode_Problems_\u0026_Solution",
+                           "PSChildName":  "leetcode_problems_and_companies.csv",
+                           "PSDrive":  {
+                                           "CurrentLocation":  "TBD\\company wise dsa",
+                                           "Name":  "E",
+                                           "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                           "Root":  "E:\\",
+                                           "Description":  "New Volume",
+                                           "MaximumSize":  null,
+                                           "Credential":  "System.Management.Automation.PSCredential",
+                                           "DisplayRoot":  null
+                                       },
+                           "PSProvider":  {
+                                              "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                              "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                              "Name":  "FileSystem",
+                                              "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                              "ModuleName":  "Microsoft.PowerShell.Core",
+                                              "Module":  null,
+                                              "Description":  "",
+                                              "Capabilities":  52,
+                                              "Home":  "C:\\Users\\LENOVO",
+                                              "Drives":  "C D E"
+                                          },
+                           "ReadCount":  2
+                       },
+        "FileCount":  1
+    },
+    {
+        "Header":  "ID,URL,Title,Difficulty,Acceptance %,Frequency %",
+        "File":  "E:\\TBD\\company wise dsa\\lc-questions\\1kosmos\\all.csv",
+        "RowCount":  1,
+        "ExampleRow":  {
+                           "value":  "2938,https://leetcode.com/problems/separate-black-and-white-balls,Separate Black and White Balls,Medium,63.9%,100.0%",
+                           "PSPath":  "E:\\TBD\\company wise dsa\\lc-questions\\1kosmos\\all.csv",
+                           "PSParentPath":  "E:\\TBD\\company wise dsa\\lc-questions\\1kosmos",
+                           "PSChildName":  "all.csv",
+                           "PSDrive":  {
+                                           "CurrentLocation":  "TBD\\company wise dsa",
+                                           "Name":  "E",
+                                           "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                           "Root":  "E:\\",
+                                           "Description":  "New Volume",
+                                           "MaximumSize":  null,
+                                           "Credential":  "System.Management.Automation.PSCredential",
+                                           "DisplayRoot":  null
+                                       },
+                           "PSProvider":  {
+                                              "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                              "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                              "Name":  "FileSystem",
+                                              "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                              "ModuleName":  "Microsoft.PowerShell.Core",
+                                              "Module":  null,
+                                              "Description":  "",
+                                              "Capabilities":  52,
+                                              "Home":  "C:\\Users\\LENOVO",
+                                              "Drives":  "C D E"
+                                          },
+                           "ReadCount":  2
+                       },
+        "FileCount":  1648
+    },
+    {
+        "Header":  "Difficulty,Title,Frequency,Acceptance Rate,Link,Topics",
+        "File":  "E:\\TBD\\company wise dsa\\lc-questions\\Accenture\\2. Three Months.csv",
+        "RowCount":  1,
+        "ExampleRow":  {
+                           "value":  "EASY,Best Time to Buy and Sell Stock,100.0,0.5525962294861477,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,\"Array, Dynamic Programming\"",
+                           "PSPath":  "E:\\TBD\\company wise dsa\\lc-questions\\Accenture\\2. Three Months.csv",
+                           "PSParentPath":  "E:\\TBD\\company wise dsa\\lc-questions\\Accenture",
+                           "PSChildName":  "2. Three Months.csv",
+                           "PSDrive":  {
+                                           "CurrentLocation":  "TBD\\company wise dsa",
+                                           "Name":  "E",
+                                           "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                           "Root":  "E:\\",
+                                           "Description":  "New Volume",
+                                           "MaximumSize":  null,
+                                           "Credential":  "System.Management.Automation.PSCredential",
+                                           "DisplayRoot":  null
+                                       },
+                           "PSProvider":  {
+                                              "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                              "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                              "Name":  "FileSystem",
+                                              "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                              "ModuleName":  "Microsoft.PowerShell.Core",
+                                              "Module":  null,
+                                              "Description":  "",
+                                              "Capabilities":  52,
+                                              "Home":  "C:\\Users\\LENOVO",
+                                              "Drives":  "C D E"
+                                          },
+                           "ReadCount":  2
+                       },
+        "FileCount":  1382
+    },
+    {
+        "Header":  "problem_link,problem_name,num_occur",
+        "File":  "E:\\TBD\\company wise dsa\\lc-questions\\Accenture.csv",
+        "RowCount":  5,
+        "ExampleRow":  {
+                           "value":  "https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum/,Find Subsequence of Length K With the Largest Sum,1",
+                           "PSPath":  "E:\\TBD\\company wise dsa\\lc-questions\\Accenture.csv",
+                           "PSParentPath":  "E:\\TBD\\company wise dsa\\lc-questions",
+                           "PSChildName":  "Accenture.csv",
+                           "PSDrive":  {
+                                           "CurrentLocation":  "TBD\\company wise dsa",
+                                           "Name":  "E",
+                                           "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                           "Root":  "E:\\",
+                                           "Description":  "New Volume",
+                                           "MaximumSize":  null,
+                                           "Credential":  "System.Management.Automation.PSCredential",
+                                           "DisplayRoot":  null
+                                       },
+                           "PSProvider":  {
+                                              "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                              "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                              "Name":  "FileSystem",
+                                              "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                              "ModuleName":  "Microsoft.PowerShell.Core",
+                                              "Module":  null,
+                                              "Description":  "",
+                                              "Capabilities":  52,
+                                              "Home":  "C:\\Users\\LENOVO",
+                                              "Drives":  "C D E"
+                                          },
+                           "ReadCount":  2
+                       },
+        "FileCount":  374
+    },
+    {
+        "Header":  "ID,Title,Acceptance,Difficulty,Frequency,Leetcode Question Link",
+        "File":  "E:\\TBD\\company wise dsa\\lc-questions\\accolite_alltime.csv",
+        "RowCount":  1,
+        "ExampleRow":  {
+                           "value":  "1234,Replace the Substring for Balanced String,33.2%,Medium,0, https://leetcode.com/problems/replace-the-substring-for-balanced-string",
+                           "PSPath":  "E:\\TBD\\company wise dsa\\lc-questions\\accolite_alltime.csv",
+                           "PSParentPath":  "E:\\TBD\\company wise dsa\\lc-questions",
+                           "PSChildName":  "accolite_alltime.csv",
+                           "PSDrive":  {
+                                           "CurrentLocation":  "TBD\\company wise dsa",
+                                           "Name":  "E",
+                                           "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                           "Root":  "E:\\",
+                                           "Description":  "New Volume",
+                                           "MaximumSize":  null,
+                                           "Credential":  "System.Management.Automation.PSCredential",
+                                           "DisplayRoot":  null
+                                       },
+                           "PSProvider":  {
+                                              "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                              "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                              "Name":  "FileSystem",
+                                              "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                              "ModuleName":  "Microsoft.PowerShell.Core",
+                                              "Module":  null,
+                                              "Description":  "",
+                                              "Capabilities":  52,
+                                              "Home":  "C:\\Users\\LENOVO",
+                                              "Drives":  "C D E"
+                                          },
+                           "ReadCount":  2
+                       },
+        "FileCount":  537
+    },
+    {
+        "Header":  "name,link,difficulty,solution",
+        "File":  "E:\\TBD\\company wise dsa\\lc-questions\\1.Company_Wise_Problem\\Leetcode_Problems_\u0026_Solution\\leetcode_problems.csv",
+        "RowCount":  1338,
+        "ExampleRow":  {
+                           "value":  "Largest 3-Same-Digit Number in String,https://leetcode.com/problems/largest-3-same-digit-number-in-string/,Easy                                                                          ,[Java](https://github.com/fishercoder1534/Leetcode/blob/master/src/main/java/com/fishercoder/solutions/_2264.java)                                                                     ",
+                           "PSPath":  "E:\\TBD\\company wise dsa\\lc-questions\\1.Company_Wise_Problem\\Leetcode_Problems_\u0026_Solution\\leetcode_problems.csv",
+                           "PSParentPath":  "E:\\TBD\\company wise dsa\\lc-questions\\1.Company_Wise_Problem\\Leetcode_Problems_\u0026_Solution",
+                           "PSChildName":  "leetcode_problems.csv",
+                           "PSDrive":  {
+                                           "CurrentLocation":  "TBD\\company wise dsa",
+                                           "Name":  "E",
+                                           "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                           "Root":  "E:\\",
+                                           "Description":  "New Volume",
+                                           "MaximumSize":  null,
+                                           "Credential":  "System.Management.Automation.PSCredential",
+                                           "DisplayRoot":  null
+                                       },
+                           "PSProvider":  {
+                                              "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                              "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                              "Name":  "FileSystem",
+                                              "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                              "ModuleName":  "Microsoft.PowerShell.Core",
+                                              "Module":  null,
+                                              "Description":  "",
+                                              "Capabilities":  52,
+                                              "Home":  "C:\\Users\\LENOVO",
+                                              "Drives":  "C D E"
+                                          },
+                           "ReadCount":  2
+                       },
+        "FileCount":  1
+    },
+    {
+        "Header":  "D",
+        "File":  "E:\\TBD\\company wise dsa\\lc-questions\\Accenture\\1. Thirty Days.csv",
+        "RowCount":  0,
+        "ExampleRow":  null,
+        "FileCount":  968
+    }
+]

@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+.env
+.pytest_cache/
+alembic/versions/*.pyc
+exports/
+
+lc-questions/
+frontend/node_modules/
+
+backend/venv/

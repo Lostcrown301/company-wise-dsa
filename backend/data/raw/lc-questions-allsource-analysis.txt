@@ -1,0 +1,47 @@
+﻿# LC Questions Dataset - All-Source Data Analysis
+
+### File & Record Processing
+1. Total raw rows processed: 91803
+2. Total files used: 3943
+3. Total files excluded: 968 (Empty headers, Schema 3, or non-CSVs)
+
+### Unique Entities & Relationships
+4. Total unique questions: 3430
+5. Total unique companies: 1273
+6. Company-question relationships: 42351
+7. Question-topic relationships: 5049
+
+### Metadata Distributions & Missing Data
+8. Difficulty distribution:
+   - Easy: 838
+   - Hard: 767
+   - Medium: 1825
+9. Questions with unknown difficulty: 0
+10. Questions without topics: 1557
+
+### Source Discovery & Coverage
+11. Questions discovered ONLY through time-period files: 1
+12. Questions discovered ONLY through all-time files: 109
+13. Questions appearing in BOTH: 3320
+
+### Deduplication & Conflicts
+14. Duplicate questions removed (raw rows - unique canonical): 88373
+15. Duplicate company-question relationships removed (raw rows - unique pairs): 49452
+16. Difficulty conflicts resolved by priority: 121
+17. Topic conflicts: 0 (Topics from all sources were normalized and merged/unioned)
+
+### Frequency Data
+18. Frequency coverage: 28854 relationships have valid all-time frequency
+19. Relationships with NO frequency: 13497 (Discovered only via time-period or no frequency in source)
+
+### Question Growth
+Previous all-time-only dataset: 4,651 unique questions
+New all-source dataset: 3430 unique questions
+New questions gained: -1221 (Note: This negative growth is actually a correction. The previous all-time-only count was artificially inflated because LeetCode URLs with and without trailing slashes (e.g. '.../two-sum' vs '.../two-sum/') were being counted as separate questions. In this all-source run, strict URL normalization was applied, deduplicating them correctly. We actually gained coverage, but the deduplication correction offset the raw number.)
+
+### Source/License Breakdown
+20. Source/license breakdown: 
+   - All 3943 utilized files are locally acquired raw datasets with "Unknown / Implicit Local" licensing. No explicit LICENSE files were found in the `lc-questions` directory.
+   - We utilized all available sources for discovery.
+   - Frequency metrics were strictly isolated to all-time files to prevent period-stacking distortion.
+

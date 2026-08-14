@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "exported_at": "2026-08-14T00:00:00Z",
+  "companies": [
+    {
+      "id": 1,
+      "name": "Google",
+      "slug": "google"
+    },
+    {
+      "id": 2,
+      "name": "Amazon",
+      "slug": "amazon"
+    },
+    {
+      "id": 3,
+      "name": "Microsoft",
+      "slug": "microsoft"
+    }
+  ],
+  "topics": [
+    {
+      "id": 1,
+      "name": "Array",
+      "slug": "array"
+    },
+    {
+      "id": 2,
+      "name": "Hash Table",
+      "slug": "hash-table"
+    },
+    {
+      "id": 3,
+      "name": "Dynamic Programming",
+      "slug": "dynamic-programming"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "title": "Two Sum Updated",
+      "slug": "two-sum",
+      "leetcode_url": "https://leetcode.com/problems/two-sum/",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "title": "Longest Increasing Subsequence",
+      "slug": "longest-increasing-subsequence",
+      "leetcode_url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+      "difficulty": "medium"
+    },
+    {
+      "id": 3,
+      "title": "Median of Two Sorted Arrays",
+      "slug": "median-of-two-sorted-arrays",
+      "leetcode_url": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+      "difficulty": "hard"
+    }
+  ],
+  "data_sources": [
+    {
+      "id": 1,
+      "name": "Sample Repo",
+      "repository_url": "https://github.com/example/repo",
+      "license": "MIT",
+      "notes": "Sample data"
+    }
+  ],
+  "company_questions": [
+    {
+      "company_id": 1,
+      "question_id": 1,
+      "frequency": 99.9
+    },
+    {
+      "company_id": 2,
+      "question_id": 1,
+      "frequency": 90.0
+    },
+    {
+      "company_id": 2,
+      "question_id": 2,
+      "frequency": 75.0
+    },
+    {
+      "company_id": 3,
+      "question_id": 3,
+      "frequency": 80.0
+    }
+  ],
+  "question_topics": [
+    {
+      "question_id": 1,
+      "topic_id": 1
+    },
+    {
+      "question_id": 1,
+      "topic_id": 2
+    },
+    {
+      "question_id": 2,
+      "topic_id": 3
+    },
+    {
+      "question_id": 3,
+      "topic_id": 1
+    }
+  ],
+  "question_sources": [
+    {
+      "question_id": 1,
+      "source_id": 1
+    },
+    {
+      "question_id": 2,
+      "source_id": 1
+    },
+    {
+      "question_id": 3,
+      "source_id": 1
+    }
+  ]
+}

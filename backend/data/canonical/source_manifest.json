@@ -1,0 +1,12 @@
+{
+  "sources": [
+    {
+      "id": "ds_fishercoder",
+      "name": "LeetCode Company-wise Problem Lists",
+      "repository_url": "https://github.com/fishercoder1534/Leetcode",
+      "license": "Public / Attribution Required",
+      "notes": "Curated lists of Leetcode questions group by companies."
+    }
+  ],
+  "total_questions": 3430
+}
