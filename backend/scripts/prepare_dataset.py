@@ -9,7 +9,9 @@ CANONICAL_TOPICS = {
     "Binary Search", "Sorting", "Prefix Sum", "Linked List", "Stack", 
     "Queue", "Tree", "Binary Search Tree", "Heap / Priority Queue", 
     "Graph", "BFS", "DFS", "Greedy", "Dynamic Programming", 
-    "Backtracking", "Trie", "Bit Manipulation", "Matrix", "Math"
+    "Backtracking", "Trie", "Bit Manipulation", "Matrix", "Math",
+    "Database", "Design", "Concurrency", "Ordered Set", "Simulation",
+    "Segment Tree", "Counting", "Shell"
 }
 
 # Mapping common LeetCode tags to our Canonical Topics
@@ -28,6 +30,8 @@ TOPIC_MAP = {
     "tree": "Tree",
     "binary-search-tree": "Binary Search Tree",
     "heap-priority-queue": "Heap / Priority Queue",
+    "heap": "Heap / Priority Queue",
+    "priority-queue": "Heap / Priority Queue",
     "graph": "Graph",
     "breadth-first-search": "BFS",
     "depth-first-search": "DFS",
@@ -37,7 +41,15 @@ TOPIC_MAP = {
     "trie": "Trie",
     "bit-manipulation": "Bit Manipulation",
     "matrix": "Matrix",
-    "math": "Math"
+    "math": "Math",
+    "database": "Database",
+    "design": "Design",
+    "concurrency": "Concurrency",
+    "ordered-set": "Ordered Set",
+    "simulation": "Simulation",
+    "segment-tree": "Segment Tree",
+    "counting": "Counting",
+    "shell": "Shell"
 }
 
 def normalize_company(name: str) -> str:

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { COMPANIES, TOPICS } from "../data.js";
+import { COMPANIES, TOPICS, CORE_TOPIC_SLUGS } from "../data.js";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -77,7 +77,7 @@ export default function HomePage() {
           {[
             { val: "3,430", label: "questions" },
             { val: "737", label: "companies" },
-            { val: "24", label: "topics" },
+            { val: "24", label: "core topics" },
           ].map(({ val, label }) => (
             <div key={label} style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
               <span style={{ fontFamily: "var(--font-dm-mono)", fontSize: 18, color: "var(--foreground)", letterSpacing: "-0.02em" }}>
@@ -129,7 +129,7 @@ export default function HomePage() {
                 Browse all →
               </button>
             </div>
-            {TOPICS.slice(0, 6).map((t, i) => (
+            {TOPICS.filter(t => CORE_TOPIC_SLUGS.has(t.slug)).slice(0, 6).map((t, i) => (
               <div
                 key={t.name}
                 className="row-hover"

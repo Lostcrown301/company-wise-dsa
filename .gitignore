@@ -42,6 +42,17 @@ backend/output.json
 backend/import_log.txt
 backend/exports/
 
+# Session-generated ETL scripts and analysis artifacts (internal only)
+backend/analyze_untagged.py
+backend/generate_audit.py
+backend/generate_v2.py
+backend/recover_topics.py
+backend/validate_v2.py
+backend/topic_audit_report.md
+backend/topic_heuristic_candidates.json
+backend/topic_taxonomy_v2_report.md
+backend/topic_v2_validation_report.md
+
 # Database / Local Files
 backend/dsa.db
 backend/dsa.db-journal

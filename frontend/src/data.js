@@ -1,3 +1,14 @@
+// The 24 canonical core topic slugs. Used to classify topics returned by /api/topics.
+// Everything returned by the API that is NOT in this list is treated as a Specialized topic.
+// Future-proof: adding new specialized topics to the DB requires no frontend changes.
+export const CORE_TOPIC_SLUGS = new Set([
+  "array", "string", "hash-table", "dynamic-programming", "math", "sorting",
+  "greedy", "dfs", "binary-search", "bfs", "matrix", "two-pointers", "tree",
+  "graph", "bit-manipulation", "stack", "prefix-sum", "sliding-window",
+  "backtracking", "linked-list", "trie", "queue", "binary-search-tree",
+  "heap-priority-queue",
+]);
+
 export const COMPANIES = [
   { rank: "01", name: "Google", slug: "google", count: 2330 },
   { rank: "02", name: "Amazon", slug: "amazon", count: 2060 },
