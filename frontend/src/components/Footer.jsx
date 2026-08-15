@@ -147,7 +147,7 @@ export default function Footer() {
             style={{ color: "var(--foreground)", textDecoration: "none", borderBottom: "1px solid var(--accent)", transition: "color 150ms ease" }}
             onMouseEnter={(e) => e.currentTarget.style.color = "var(--accent)"}
             onMouseLeave={(e) => e.currentTarget.style.color = "var(--foreground)"}
-          >ASHUTOSH</a> USING ANTIGRAVITY
+          >ASHUTOSH</a>
         </div>
       </div>
     </footer>
