@@ -81,7 +81,7 @@ export default function GlobalSearchPage() {
                 {results.companies.map((c, i) => (
                   <Link
                     key={c.slug}
-                    to={`/companies/detail?slug=${c.slug}`}
+                    to={`/companies/${c.slug}`}
                     className="row-hover"
                     style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "13px 0", borderBottom: i < results.companies.length - 1 ? "1px solid var(--border)" : "none", textDecoration: "none" }}
                   >
@@ -100,7 +100,7 @@ export default function GlobalSearchPage() {
                 {results.topics.map((t, i) => (
                   <Link
                     key={t.slug}
-                    to={`/topics/detail?slug=${t.slug}`}
+                    to={`/topics/${t.slug}`}
                     className="row-hover"
                     style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "14px 0", borderBottom: i < results.topics.length - 1 ? "1px solid var(--border)" : "none", textDecoration: "none" }}
                   >
