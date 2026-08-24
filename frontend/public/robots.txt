@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /practice/session
+Disallow: /progress
+Disallow: /settings
+Disallow: /search
+Disallow: /questions/detail
+
+Sitemap: https://company-dsa-practice-tau.vercel.app/sitemap.xml

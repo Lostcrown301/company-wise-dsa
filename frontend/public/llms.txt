@@ -1,0 +1,32 @@
+﻿# Company-wise DSA Practice
+
+> A dedicated platform for software engineers and students preparing for coding interviews, placements, and company-specific coding assessments.
+
+## Purpose
+This platform streamlines technical interview preparation by organizing Data Structures and Algorithms (DSA) questions based on the specific companies that frequently ask them. It acts as an aggregated directory of company-associated interview questions categorized by company, topic, and difficulty.
+
+## Main Features
+- **Company-Specific Question Banks:** Browse technical questions associated with over 700 tech companies (including top-tier companies like Google, Amazon, Meta, Microsoft, and Bloomberg).
+- **Topic-Based Organization:** Practice questions categorized into 32 core DSA topics.
+- **Difficulty Filtering:** Filter problems across standard difficulty levels: Easy, Medium, and Hard.
+- **Mock Practice Sessions:** Configure custom practice sessions to simulate interview environments.
+- **Progress Tracking:** Keep track of solved problems, bookmark challenging questions for later review, and attach personal notes to specific problems (all progress is saved locally).
+- **Global Search:** Instantly search across all companies, topics, and question titles.
+
+## Important Links
+- [Home](https://company-dsa-practice-tau.vercel.app/)
+- [Companies Directory](https://company-dsa-practice-tau.vercel.app/companies) - Browse all supported companies.
+- [Topics Directory](https://company-dsa-practice-tau.vercel.app/topics) - Browse questions categorized by DSA concepts.
+- [Question Browser](https://company-dsa-practice-tau.vercel.app/questions) - The complete directory of all available coding problems.
+- [Practice Setup](https://company-dsa-practice-tau.vercel.app/practice) - Configure custom practice sessions.
+
+## Difficulty Levels
+- Easy
+- Medium
+- Hard
+
+## Core DSA Topics Covered
+Includes fundamental concepts such as Array, String, Hash Table, Dynamic Programming, Math, Sorting, Greedy, Depth-First Search (DFS), Binary Search, Breadth-First Search (BFS), Tree, Matrix, Two Pointers, Bit Manipulation, and Stack, among others.
+
+## Data Scope
+The platform provides question titles, difficulties, frequency signals, and external links. It does not host problem descriptions, test cases, or editorial solutions directly, but instead links to the original platform (e.g., LeetCode) for full problem solving.

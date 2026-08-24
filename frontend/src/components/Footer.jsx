@@ -109,6 +109,57 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+
+          {/* FEEDBACK SECTION */}
+          <div>
+            <h3 style={{ 
+              fontFamily: "var(--font-dm-mono)", 
+              fontSize: 11, 
+              letterSpacing: "0.06em", 
+              color: "var(--muted-foreground)", 
+              textTransform: "uppercase", 
+              marginBottom: 24,
+              fontWeight: 500
+            }}>
+              Feedback
+            </h3>
+            <div style={{ 
+              fontFamily: "var(--font-dm-sans)", 
+              fontSize: 13, 
+              color: "var(--muted-foreground)",
+              lineHeight: 1.5,
+              display: "flex",
+              flexDirection: "column",
+              gap: 16
+            }}>
+              <p style={{ margin: 0 }}>
+                Enjoying the app or have suggestions? We'd love to hear from you!
+              </p>
+              <a 
+                href="https://forms.gle/vt1UcseSQR7e9KRe8"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "8px 16px",
+                  backgroundColor: "var(--foreground)",
+                  color: "var(--background)",
+                  textDecoration: "none",
+                  borderRadius: "4px",
+                  fontWeight: 500,
+                  fontSize: 13,
+                  transition: "opacity 150ms ease",
+                  width: "fit-content"
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.opacity = "0.9"}
+                onMouseLeave={(e) => e.currentTarget.style.opacity = "1"}
+              >
+                Send Feedback
+              </a>
+            </div>
+          </div>
         </div>
       )}
 
