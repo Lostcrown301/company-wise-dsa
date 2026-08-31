@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import StatsCounter from "./StatsCounter.jsx";
 
 export default function Footer() {
   const location = useLocation();
@@ -175,14 +176,17 @@ export default function Footer() {
         flexWrap: "wrap",
         gap: 16
       }}>
-        <div style={{ 
-          fontFamily: "var(--font-dm-mono)", 
-          fontSize: 11, 
-          letterSpacing: "0.06em", 
-          color: "var(--muted-foreground)", 
-          textTransform: "uppercase" 
-        }}>
-          © 2026 ASHUTOSH SHUKLA
+        <div style={{ display: "flex", alignItems: "center", gap: 24, flexWrap: "wrap" }}>
+          <div style={{ 
+            fontFamily: "var(--font-dm-mono)", 
+            fontSize: 11, 
+            letterSpacing: "0.06em", 
+            color: "var(--muted-foreground)", 
+            textTransform: "uppercase" 
+          }}>
+            © 2026 ASHUTOSH SHUKLA
+          </div>
+          <StatsCounter />
         </div>
         <div style={{ 
           fontFamily: "var(--font-dm-mono)", 

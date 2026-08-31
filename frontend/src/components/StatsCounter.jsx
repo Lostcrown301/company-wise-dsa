@@ -57,22 +57,19 @@ export default function StatsCounter() {
   const totalAttempts = useCountUp(stats.total_attempts);
   const problemsSolved = useCountUp(stats.problems_solved);
 
+  if (stats.unique_visitors === 0 && stats.total_attempts === 0 && stats.problems_solved === 0) {
+    return null;
+  }
+
   return (
-    <div style={{ marginTop: 24, display: "flex", gap: 32, flexWrap: "wrap", padding: "16px 20px", backgroundColor: "var(--card)", border: "1px solid var(--border)", borderRadius: "var(--radius)" }}>
-      {[
-        { val: uniqueVisitors.toLocaleString(), label: "unique visitors" },
-        { val: totalAttempts.toLocaleString(), label: "problem attempts" },
-        { val: problemsSolved.toLocaleString(), label: "problems solved" },
-      ].map(({ val, label }) => (
-        <div key={label} style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
-          <span style={{ fontFamily: "var(--font-dm-mono)", fontSize: 18, color: "var(--foreground)", letterSpacing: "-0.02em" }}>
-            {val}
-          </span>
-          <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--muted-foreground)" }}>
-            {label}
-          </span>
-        </div>
-      ))}
+    <div style={{ 
+      fontFamily: "var(--font-dm-mono)", 
+      fontSize: 11, 
+      letterSpacing: "0.06em", 
+      color: "var(--muted-foreground)", 
+      textTransform: "uppercase" 
+    }}>
+      {uniqueVisitors.toLocaleString()} visitors · {totalAttempts.toLocaleString()} attempts · {problemsSolved.toLocaleString()} solved
     </div>
   );
 }
