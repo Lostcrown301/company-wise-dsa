@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import { trackSolve } from '../api.js';
 
 const ProgressContext = createContext();
 
@@ -55,6 +56,10 @@ export function ProgressProvider({ children }) {
         delete nextSolved[slug];
       } else {
         nextSolved[slug] = { solvedAt: new Date().toISOString() };
+        const visitorId = localStorage.getItem("visitor_id");
+        if (visitorId) {
+          trackSolve(visitorId, slug);
+        }
       }
       return { ...prev, solved: nextSolved };
     });

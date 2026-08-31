@@ -4,6 +4,7 @@ from app.models.topic import Topic
 from app.models.question import Question, DifficultyEnum
 from app.models.data_source import DataSource
 from app.models.associations import company_questions, question_topics, question_sources
+from app.models.tracking import Visitor, Attempt, Solve, RateLimit
 
 __all__ = [
     "Base",
@@ -14,5 +15,8 @@ __all__ = [
     "DifficultyEnum",
     "company_questions",
     "question_topics",
-    "question_sources"
+    "question_sources",
+    "Visitor",
+    "Attempt",
+    "Solve"
 ]

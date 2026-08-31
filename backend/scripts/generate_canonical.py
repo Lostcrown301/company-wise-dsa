@@ -1,12 +1,13 @@
-﻿import os
+import os
 import csv
 from collections import defaultdict
 import json
 import urllib.parse
 import re
 
-base_dir = r"e:\TBD\company wise dsa\lc-questions"
-out_dir = r"e:\TBD\company wise dsa\data\canonical"
+_backend_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+base_dir = os.path.join(_backend_dir, "lc-questions")
+out_dir = os.path.join(_backend_dir, "data", "canonical")
 os.makedirs(out_dir, exist_ok=True)
 
 canonical_topics_set = {

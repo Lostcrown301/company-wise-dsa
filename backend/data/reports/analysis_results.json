@@ -1,0 +1,102 @@
+{
+  "unique_companies_count": 941,
+  "schema_stats": {
+    "1": {
+      "files": 1648,
+      "rows": 39353,
+      "unique_questions": 3358,
+      "companies": 656
+    },
+    "2": {
+      "files": 1382,
+      "rows": 19067,
+      "unique_questions": 1990,
+      "companies": 466
+    },
+    "3": {
+      "files": 968,
+      "rows": 0,
+      "unique_questions": 0,
+      "companies": 406
+    },
+    "4": {
+      "files": 537,
+      "rows": 20453,
+      "unique_questions": 1446,
+      "companies": 200
+    },
+    "5": {
+      "files": 374,
+      "rows": 7728,
+      "unique_questions": 1263,
+      "companies": 188
+    },
+    "6": {
+      "files": 1,
+      "rows": 3864,
+      "unique_questions": 1263,
+      "companies": 1
+    },
+    "7": {
+      "files": 1,
+      "rows": 1338,
+      "unique_questions": 1336,
+      "companies": 1
+    }
+  },
+  "schema2_deep": {
+    "total_rows": 19067,
+    "unique_questions": 1990,
+    "unique_companies": 466,
+    "unique_topics": 75,
+    "avg_questions_per_company": 19.57296137339056,
+    "missing_topics": 60,
+    "missing_difficulty": 0,
+    "missing_url": 0,
+    "conflicting_diff_count": 0,
+    "sample_conflicting_diff": {},
+    "conflicting_topics_count": 53,
+    "sample_conflicting_topics": {
+      "https://leetcode.com/problems/number-of-islands": [
+        "Array, Depth-First Search, Breadth-First Search, Union Find, Matrix",
+        "Array, Depth-First Search, Breadth-First Search, Union-Find, Matrix"
+      ],
+      "https://leetcode.com/problems/divide-nodes-into-the-maximum-number-of-groups": [
+        "Depth-First Search, Breadth-First Search, Union-Find, Graph Theory",
+        "Depth-First Search, Breadth-First Search, Union Find, Graph"
+      ],
+      "https://leetcode.com/problems/longest-common-prefix": [
+        "String, Trie",
+        "Array, String, Trie"
+      ],
+      "https://leetcode.com/problems/parallel-courses-iii": [
+        "Array, Dynamic Programming, Graph Theory, Topological Sort",
+        "Array, Dynamic Programming, Graph, Topological Sort"
+      ],
+      "https://leetcode.com/problems/longest-increasing-path-in-a-matrix": [
+        "Array, Dynamic Programming, Depth-First Search, Breadth-First Search, Graph Theory, Topological Sort, Memoization, Matrix",
+        "Array, Dynamic Programming, Depth-First Search, Breadth-First Search, Graph, Topological Sort, Memoization, Matrix"
+      ]
+    },
+    "frequency_time_periods_for_top_companies": {
+      "Uber": {
+        "30_days": 9,
+        "3_months": 33,
+        "6_months": 387,
+        "5. All": 362
+      },
+      "Google": {
+        "30_days": 100,
+        "3_months": 100,
+        "6_months": 200,
+        "5. All": 100
+      },
+      "Meta": {
+        "30_days": 100,
+        "3_months": 100,
+        "6_months": 200,
+        "5. All": 100
+      }
+    }
+  }
+}

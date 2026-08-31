@@ -1,6 +1,6 @@
 import os
 
-out_dir = r"e:\TBD\company wise dsa\data\raw"
+out_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "raw")
 os.makedirs(out_dir, exist_ok=True)
 
 report = """# LC Questions Dataset - Final Analysis & Hard License Blocker

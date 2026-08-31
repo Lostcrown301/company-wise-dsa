@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { COMPANIES, TOPICS, CORE_TOPIC_SLUGS } from "../data.js";
+import StatsCounter from "../components/StatsCounter.jsx";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -89,6 +90,8 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+        
+        <StatsCounter />
       </section>
 
       <hr className="divider" />

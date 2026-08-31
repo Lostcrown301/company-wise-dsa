@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
-from app.api import companies, topics, questions
+from app.api import companies, topics, questions, tracking
 
 app = FastAPI(
     title="DSA Practice Platform API",
@@ -26,6 +26,7 @@ app.add_middleware(
 app.include_router(companies.router)
 app.include_router(topics.router)
 app.include_router(questions.router)
+app.include_router(tracking.router)
 
 @app.get("/health")
 def health_check():

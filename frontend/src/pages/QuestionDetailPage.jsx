@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { getQuestions } from "../api.js";
+import { getQuestions, trackAttempt } from "../api.js";
 import { diffClass } from "../components/utils.js";
 import { useProgress } from "../context/ProgressContext.jsx";
 
@@ -29,6 +29,10 @@ export default function QuestionDetailPage() {
         const data = await getQuestions({ slugs: slug, limit: 1 });
         if (data.items && data.items.length > 0) {
           setQuestion(data.items[0]);
+          const visitorId = localStorage.getItem("visitor_id");
+          if (visitorId) {
+            trackAttempt(visitorId, slug);
+          }
         } else {
           navigate("/questions"); // not found
         }

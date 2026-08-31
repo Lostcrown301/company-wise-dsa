@@ -16,11 +16,21 @@ import GlobalSearchPage from "./pages/GlobalSearchPage.jsx";
 import Footer from "./components/Footer.jsx";
 
 import { ProgressProvider } from "./context/ProgressContext.jsx";
+import { trackVisitor } from "./api.js";
 
 export default function App() {
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem("dsa_theme") || "light";
   });
+
+  useEffect(() => {
+    let visitorId = localStorage.getItem("visitor_id");
+    if (!visitorId) {
+      visitorId = crypto.randomUUID();
+      localStorage.setItem("visitor_id", visitorId);
+    }
+    trackVisitor(visitorId);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("dsa_theme", theme);

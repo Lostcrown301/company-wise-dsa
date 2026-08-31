@@ -75,3 +75,51 @@ export async function getTopicDetails(slug) {
   }
   return response.json();
 }
+
+export async function trackVisitor(visitorId) {
+  const url = new URL("/api/visitors", window.location.origin);
+  try {
+    await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ visitor_id: visitorId })
+    });
+  } catch (err) {
+    console.error("Failed to track visitor", err);
+  }
+}
+
+export async function trackAttempt(visitorId, slug) {
+  const url = new URL("/api/attempts", window.location.origin);
+  try {
+    await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ visitor_id: visitorId, problem_slug: slug })
+    });
+  } catch (err) {
+    console.error("Failed to track attempt", err);
+  }
+}
+
+export async function trackSolve(visitorId, slug) {
+  const url = new URL("/api/solves", window.location.origin);
+  try {
+    await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ visitor_id: visitorId, problem_slug: slug })
+    });
+  } catch (err) {
+    console.error("Failed to track solve", err);
+  }
+}
+
+export async function getStats() {
+  const url = new URL("/api/stats", window.location.origin);
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch stats: ${response.statusText}`);
+  }
+  return response.json();
+}
